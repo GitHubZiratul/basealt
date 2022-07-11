@@ -6,6 +6,7 @@ Release: alt1
 Summary: Serial device programmer
 # https://github.com/lancos/ponyprog
 Source: %origname-%version.tar.gz
+Source1: qhexedit2.tar.gz
 License: GPLv2
 Group: Development/Other
 Url: http://www.lancos.com/prog.html
@@ -25,6 +26,8 @@ PIC 12 micro, AT89S micro and SDE2506 eeprom family chips.
 
 %prep
 %setup -n %origname-%version
+%setup -T -D -a 1
+
 
 %build
 %cmake
